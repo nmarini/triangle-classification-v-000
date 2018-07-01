@@ -10,7 +10,7 @@ class Triangle
   end
 
   def valid?
-    if @side_1 + @side_2 =< @side_3 || @side_3 + @side_1 =< @side_2 || @side_3 + @side_2 =< @side_1 || self.sides.any?{|side| side == 0}
+    if @side_1 + @side_2 <= @side_3 || @side_3 + @side_1 <= @side_2 || @side_3 + @side_2 <= @side_1 || self.sides.any?{|side| side == 0}
     false
     else
     true
