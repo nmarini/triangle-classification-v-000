@@ -18,9 +18,9 @@ class Triangle
   def kind
     if self.valid? != true
       begin
-      raise TriangleError
+        raise TriangleError
       rescue TriangleError => error
-      puts error.message
+        puts error.message
       end
     elsif @side_1 == @side_2 && @side_2 == @side_3
       :equilateral
@@ -32,8 +32,6 @@ class Triangle
   end
 
   class TriangleError < StandardError
-    def message
-     "Error"
-    end
+    
   end
 end
