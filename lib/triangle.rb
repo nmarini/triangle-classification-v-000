@@ -10,7 +10,7 @@ class Triangle
   end
 
   def valid?
-    if self.sides.any?{|side| side < 0 } 
+    if self.sides.any?{|side| side < 0 }
     false
     else
     true
