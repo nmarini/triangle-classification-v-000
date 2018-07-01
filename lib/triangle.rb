@@ -8,7 +8,7 @@ class Triangle
   end
 
   def valid?
-    if @side_1 + @side_2 < @side_3 || @side_3 + @side_1 < @side_2 || @side_3 + @side_2 < @side_1 || [@sides_1, @side_2, @side_3].any?{|side| side == 0}
+    if [@sides_1, @side_2, @side_3].any?{|side| side == 0}
     false
     else
     true
