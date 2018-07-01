@@ -11,21 +11,21 @@ class Triangle
   def valid?
     if @side_1 + @side_2 < @side_3 || @side_3 + @side_1 < @side_2 || @side_3 < side_1
     false
-    else 
+    else
     true
-    end 
+    end
   end
 
   def kind
     if self.valid? != true
       begin
       raise TriangleError
-      rescue TriangleError => error 
-      puts error.message 
+      rescue TriangleError => error
+      puts error.message
       end
-    elsif @side_1 == @side_2 == @side_3
+    elsif @side_1 == @side_2 && @side_2 == @side_3
       :equilateral
-    elsif @side_1 == @side_2 || @side_2 == @side_3 
+    elsif @side_1 == @side_2 || @side_2 == @side_3
       :isosceles
     else
       :scalene
@@ -33,7 +33,7 @@ class Triangle
   end
 
   class TriangleError < StandardError
-    def message 
+    def message
      "Error"
     end
   end
